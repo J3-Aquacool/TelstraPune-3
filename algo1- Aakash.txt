@@ -1,0 +1,27 @@
+Find the first occurrence of an element in an array: Given an array of integers and an element, write a function to find the first occurrence of the element in the array.
+
+
+create empty variable x to store position
+sort the given array in ascending order
+iterate through each element in the array to search for the specific element
+if match found, store it in the variable x
+return the position stored in x
+if match not found, continue iterating until match found
+
+if match not found, return not found
+
+
+
+
+PSUEDOCODE
+
+define a function, it takes array and the target element
+set vlaue of variable x as 0
+create a for loop to iterate through the array
+loop breaks if element found
+stores position in x
+checks if value of x is non-negative, then returns value of x 
+if not found after iterating and checking full array, stores "not found" in x
+
+assign values to arr and element to check if element present in array and return the position using def()
+
