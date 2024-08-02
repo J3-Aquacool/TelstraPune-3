@@ -1,0 +1,34 @@
+Find the pair of elements in an array that add up to a given sum: Given an array of integers and a target sum, write a function to find the pair of elements in the array that add up to the target sum.
+
+START
+
+Step-1: Create variables to store the array and target sum
+	int arr[];
+	int tSum;
+
+Step-2: Input the array and the target sum
+	Input arr[];
+	Input tSum;
+
+Step-3: Create two pointers, one for the first element and one for the second element
+	int p1;
+	int p2;
+
+
+Step-4: Check for every pair that is possible, start with index 0 and check by making pairs with every consecutive index and so on
+	for(p1 =0; p1<length(arr[])-1; p1++):                          //Start with the first index and make pairs
+	{
+		for(p2 = p1 +1; p2<=length(arr[])-1; p2++): 		//check for every pair for the given pointer p1
+			if(arr[p1] + arr[p2] == tSum):
+				print(the pair is arr[p1],arr[p2])
+				End
+	}
+Step-5:If we have checked for every pair possible then print(there is no such pair)
+
+End
+
+
+
+
+
+

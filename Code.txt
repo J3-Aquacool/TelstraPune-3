@@ -1,0 +1,49 @@
+import java.util.*;
+
+public class Main {
+
+    public static void findPair(int[] arr, int tSum){
+
+        int length = arr.length;
+        boolean pairFound = false;
+
+        for( int p1 = 0; p1 < length-1; p1++){
+            for(int p2 = p1+1; p2 <= length-1; p2++){
+                if( arr[p1] + arr[p2] == tSum){
+                    System.out.println("The pair is: " + arr[p1] + "," + arr[p2] );
+                    pairFound = true;
+                    break;
+                }
+            }
+            if (pairFound) {
+                break;
+            }
+        }
+
+        if (!pairFound) {
+            System.out.println("There is no pair in the array whose sum is equal to the target sum.");
+        }
+
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        System.out.print("Enter the target sum: ");
+        int tSum = scanner.nextInt();
+
+        findPair(arr,tSum);
+
+
+    }
+}
