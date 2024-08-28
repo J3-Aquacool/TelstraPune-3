@@ -1,0 +1,23 @@
+{
+
+    "include": [
+
+            "./tsfiles/*",
+            "./controller/*",
+            "./main/*"
+
+    ],
+
+    "compilerOptions": {
+
+            "noEmitOnError": true,
+
+            "outDir": "./jsfiles/",
+
+            "module":"ES6",
+            "target": "ES6",
+            "rootDir": "./"
+
+    }
+
+}
