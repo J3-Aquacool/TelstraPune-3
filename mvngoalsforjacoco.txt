@@ -1,0 +1,3 @@
+clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+
+sonar:sonar -Dsonar.login=squ_ff1b4bb61ff51ffaf0aa5242d93cf4815b6ec3ef
