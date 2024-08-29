@@ -1,0 +1,25 @@
+Step 1 :npm install swagger-jsdoc swagger-ui-express
+
+Step 2:
+Add the below code to the exiting rest-api designed
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerJsdoc = require('swagger-jsdoc');
+
+
+
+const options = {
+    definition: {
+      openapi: '3.0.0',
+      info: {
+        title: 'Node.js API Documentation',
+        version: '1.0.0',
+      },
+    },
+    apis: ['./*.js'], // Path to the API docs
+  };
+  const swaggerSpec = swaggerJsdoc(options);
+
+  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+
