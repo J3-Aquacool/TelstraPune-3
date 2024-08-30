@@ -1,0 +1,28 @@
+   // autowire DisocveryClient
+       @Autowired
+       DiscoveryClient client;
+       
+		/*
+		 * public CartRestConsumer( DiscoveryClient client) { this.client=client;
+		 * 
+		 * }
+		 */
+       
+       public String getCartInfo() {
+          // get ServiceInstance list using serviceId
+            List<ServiceInstance> siList = client.getInstances("CartService");
+
+         // read manually one instance from index#0 
+            ServiceInstance si = siList.get(0);
+
+         // read URI and Add path that returns url
+            String url = si.getUri() +"/cart/getData";
+
+         // create object for RestTemplate
+            RestTemplate rt = new RestTemplate();
+
+          // make HTTP call and get Reponse data
+            String response = rt.getForObject(url, String.class);
+
+          // return response back to Consumer 
+             return response;
